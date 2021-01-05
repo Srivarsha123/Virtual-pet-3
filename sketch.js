@@ -6,7 +6,7 @@ var bedroom, garden, washroom, sad;
 
 function preload(){
   //dogImg = loadImage("images/dogImg.png");
-  //happyDogImg = loadImage("images/dogImg1.png");
+  happyDogImg = loadImage("images/dogImg1.png");
   milkImg = loadImage("images/Milk.png");
   bgImg = loadImage("images/bg.png");
   bedroom = loadImage("images/Bed Room.png");
