@@ -42,6 +42,7 @@ class Foods{
         }
 
       //console.log(gameState)
+      dog.addImage(sad);
       this.addFood.position(360, 55);
       this.addFood.mousePressed(()=> {
         foodCount +=1
