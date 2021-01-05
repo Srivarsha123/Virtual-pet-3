@@ -42,7 +42,6 @@ class Foods{
         }
 
       //console.log(gameState)
-      dog.addImage(sad);
       this.addFood.position(360, 55);
       this.addFood.mousePressed(()=> {
         foodCount +=1
@@ -56,12 +55,6 @@ class Foods{
       this.addFood.style("font-family","Comic Sans MS");
 
       this.feedDog.position(780, 55);
-      if(foodS != 0){
-      this.feedDog.mousePressed(()=> {
-        foodObj.writeStock(foodS)
-        dog.addImage(happyDogImg)
-      });
-      }
       this.feedDog.size(110,35)
       this.feedDog.style('font-size', '15px');
       this.feedDog.style('border-radius', '100%');
@@ -105,6 +98,16 @@ class Foods{
   show(){
     this.addFood.show();
     this.feedDog.show();
+  }
+
+  img(){
+    if(foodS != 0){
+      this.feedDog.mousePressed(()=> {
+        foodObj.writeStock(foodS)
+        dog.addImage(happyDogImg)
+        console.log("hello")
+      });
+      }
   }
 
 }
