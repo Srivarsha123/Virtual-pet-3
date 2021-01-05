@@ -58,6 +58,7 @@ class Foods{
       if(foodS != 0){
       this.feedDog.mousePressed(()=> {
         foodObj.writeStock(foodS)
+        dog.addImage(happyDogImg)
       });
       }
       this.feedDog.size(110,35)
