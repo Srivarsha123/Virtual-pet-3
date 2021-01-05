@@ -22,7 +22,6 @@ function setup() {
   database = firebase.database();
   
   dog = createSprite(425, 400);
-  dog.addImage(sad);
   dog.scale = 0.3;
 
   foodStock = database.ref('Food');
