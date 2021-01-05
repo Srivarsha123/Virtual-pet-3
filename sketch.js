@@ -2,7 +2,7 @@ var  dog, happyDog, database, foodS, foodStock, dogImg, happyDogImg, milk, milkI
 var addFood, feedDog, foodObj, lastfed, feed;
 var foodCount = 0;
 var gameState;
-var bedroom, garden, washroom, sad;
+var bedroom, garden, washroom, sadd;
 
 function preload(){
   //dogImg = loadImage("images/dogImg.png");
@@ -12,7 +12,7 @@ function preload(){
   bedroom = loadImage("images/Bed Room.png");
   garden = loadImage("images/Garden.png");
   washroom = loadImage("images/Wash Room.png");
-  sad = loadImage("images/vaccination.png");
+  sadd = loadImage("images/vaccination.png");
 }
 
 function setup() {
@@ -22,6 +22,7 @@ function setup() {
   database = firebase.database();
   
   dog = createSprite(425, 400);
+  dog.addImage(sadd);
   dog.scale = 0.3;
 
   foodStock = database.ref('Food');
@@ -39,8 +40,10 @@ function draw() {
   fill("black")
   stroke(3)
 
+  foodObj.img();
+
   if(foodS !== 0){
-    dog.addImage(sad)
+    //dog.addImage(sadd)
     dog.scale = 0.3;
   }
   else{
@@ -77,6 +80,7 @@ function draw() {
   }
 
   else{
+  foodObj.img();
   foodObj.update("hungry")
   }
 
@@ -105,7 +109,6 @@ function draw() {
 
   //console.log(gameState);
 }
-
 
 function readStock(data){
   foodS = data.val();
